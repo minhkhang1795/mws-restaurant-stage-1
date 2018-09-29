@@ -32,6 +32,9 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+    // DevTools opening will trigger these o-i-c requests, which this SW can't handle.
+    // https://github.com/paulirish/caltrainschedule.io/issues/49
+    if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
     event.respondWith(
         caches.match(event.request).then(function(response) {
             console.log(response);
