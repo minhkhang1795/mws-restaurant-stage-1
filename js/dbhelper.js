@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    return '/data/restaurants.json';
+    return location.hostname === 'localhost' ? '/data/restaurants.json' : 'https://minhkhang1795.github.io/mws-restaurant-stage-1/data/restaurants.json';
   }
 
   /**
