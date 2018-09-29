@@ -5,7 +5,17 @@ var newMap;
  * Initialize map as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-    initMap();
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+                console.log('Registration successful, scope is:', registration.scope);
+                initMap();
+            })
+            .catch(function(error) {
+                console.log('Service worker registration failed, error:', error);
+                initMap();
+            });
+    }
 });
 
 /**
