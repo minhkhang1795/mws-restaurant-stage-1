@@ -39,7 +39,7 @@ class DBHelper {
       if (error) {
         callback(error, null);
       } else {
-        const restaurant = restaurants.find(r => r.id === id);
+        const restaurant = restaurants.find(r => r.id == id);
         if (restaurant) { // Got the restaurant
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
@@ -75,7 +75,7 @@ class DBHelper {
         callback(error, null);
       } else {
         // Filter restaurants to have only given neighborhood
-        const results = restaurants.filter(r => r.neighborhood == neighborhood);
+        const results = restaurants.filter(r => r.neighborhood === neighborhood);
         callback(null, results);
       }
     });
@@ -142,7 +142,7 @@ class DBHelper {
    * Restaurant page URL.
    */
   static urlForRestaurant(restaurant) {
-    return (`/restaurant.html?id=${restaurant.id}`);
+    return (`./restaurant.html?id=${restaurant.id}`);
   }
 
   /**
