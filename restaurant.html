@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Logo Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/ico/favicon-16x16.png">
+    <link rel="manifest" href="img/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- Normalize.css for better cross-browser consistency -->
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css"/>
     <!-- Main CSS file -->
@@ -14,29 +33,21 @@
 </head>
 
 <body class="inside">
-<!-- Beginning header -->
+
 <header>
-    <!-- Beginning nav -->
     <nav>
         <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
-    <!-- Beginning breadcrumb -->
     <ul id="breadcrumb">
         <li><a href="./">Home</a></li>
     </ul>
-    <!-- End breadcrumb -->
-    <!-- End nav -->
 </header>
-<!-- End header -->
 
-<!-- Beginning main -->
 <main id="maincontent">
-    <!-- Beginning map -->
     <section id="map-container">
         <div id="map"></div>
     </section>
-    <!-- End map -->
-    <!-- Beginning restaurant -->
+
     <section id="restaurant-container">
         <h1 id="restaurant-name"></h1>
         <img id="restaurant-img">
@@ -44,22 +55,17 @@
         <p id="restaurant-address"></p>
         <table id="restaurant-hours"></table>
     </section>
-    <!-- end restaurant -->
-    <!-- Beginning reviews -->
+
     <section id="reviews-container">
         <ul id="reviews-list"></ul>
     </section>
-    <!-- End reviews -->
 </main>
-<!-- End main -->
 
-<!-- Beginning footer -->
-<footer id="footer">
-    <p> Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.</p>
+<footer id="footer" tabindex="0">
+    <p>Copyright (c) 2018 <a href="https://minhkhang1795.github.io" target="_blank"><strong>Minh-Khang Vu</strong></a>.
+        All Rights Reserved.</p>
 </footer>
-<!-- End footer -->
 
-<!-- Beginning scripts -->
 <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
         integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
         crossorigin=""></script>
@@ -69,8 +75,6 @@
 <script type="text/javascript" src="js/restaurant_info.js"></script>
 <!-- Google Maps -->
 <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
-<!-- End scripts -->
 
 </body>
-
 </html>
