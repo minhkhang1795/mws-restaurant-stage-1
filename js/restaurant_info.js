@@ -184,6 +184,7 @@ createReviewHTML = (review) => {
     const rating = document.createElement('a');
     rating.innerHTML = `Rating: ${review.rating}`;
     rating.className = 'rating';
+    rating.role = 'button';
     li.appendChild(rating);
 
     const comments = document.createElement('p');
